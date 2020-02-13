@@ -1,0 +1,121 @@
+2019.11.15
+-- Setted up the gitlab account and created the group.
+-- Created this log to record each process.
+
+2019.11.18
+-- Created a welcoming page for the game, including the start buttom and background pictures.
+-- Modified the main class to show the welcoming page.
+-- Modified the controller class to add elements in the welcoming page and add onClick method for the start buttom.
+-- Created two doors at the side of the play field to allow the pacman to transit between them.
+
+2019.11.19
+-- Replaced the pacman and ghosts with the image provided in the cw.
+-- Setted rotation for the pacman when it moves to specific directions.
+-- Made the ghost can go through the two doors.
+!! (almost fixed) Bugs found that ghost can go through the obstacle and get out of the maze.
+!! (fixed) Bugs found that pacman still can eat cookie after it died, stopPacman may solve this.
+!! (fixed) Bugs found that if pacman died near the re-alive point, which is (2.5,2.5), the game will end immediatly because of the quick encounter judgment for three lives.
+-- Score file is created to record all the scores.
+
+2019.11.20
+!! (fixed) Bugs found that after winning the game, may exists an infinite loop.
+-- Created setting button and had a color change of two button when the mouse hangs on the button.
+-- Created a setting page for the game, only a button for now.
+-- Tried to change the background color by using the inline style but failed.
+
+2019.11.21
+* (Done) Need to combine fxml, css and controller together to generate the page.
+* (Done) Need to list creative design in the report.
+* Need to include the reference of refactoring part in video.
+-- Added more elements in the setting page.
+-- Implemented the interface switch control.
+
+2019.11.22
+-- Set the color choice button and demonstration to allow user to change the color of background and the obstacle.
+-- The same color is avoided to be used by both background and obstacle.
+-- Created the score page, which read from the csv file and can be shown in the Listview.
+-- Sorted the ListView in decreasing order.
+-- If the score page is showing when restart, it will automatically close.
+
+2019.11.23
+-- Use pacman image to represent the lifes.
+-- Completed most of the setting page, which can set background color, obstacle color and difficulty.
+-- Difficulty setting can refer to the ghost number in the game.
+-- Color setting can refer to the gaming page.
+-- Created a preview stage to see the combination of selected color.
+
+2019.11.24
+-- Bug fixed when winning the game, may exists an infinite loop by checking the endgame status.
+-- Bug fixed that pacman still can eat cookie after it died by forbidden the movement.
+
+2019.11.25
+-- Created folders to sort all the image in different folder.
+-- Bug fixed when the game ended the pacman and the ghosts still can move, by checking the gameEnded status.
+!! (fixed) Bugs found when restart the game, background color will be set to default.
+-- Bug fixed when restart the game, background color will be set to default by adding background color before restart.
+-- Current score added in the score interface.
+-- Implemented the MVC pattern.
+-- Refactoried moveUntilYouCant() method in ghost class into four method. (WS04-S08)
+-- The getRandomBoolean() method in ghost class ends up doing nothing. (WS04-S25)
+-- The checkCookieCoalition() method does multiple things/ too long, separate into four methods setPacmanLayout(), setCookieLayout(), checkCookieCoalition() and WinEnding(). The setPacmanLayout() method is also used in checkGhostCoalition(). (WS04-S05)
+!! (Fixed) Bugs found that when doing setting again, will not apply the lastest setting.
+-- In drawBoard() method exists a lot of duplicate code, new method CreateCookie() that encapsulates the code can then call it.(WS04-S05)
+
+2019.11.26
+* (X) Need to randomly create the maze.
+* (Done) Need to seperate into different packages.
+* (Done) Need to use image to represent pacman and ghost.
+* (Done) Need to have difficulty setting with both ghost number and maze difficulty.
+* Need to implement AI design of ghost.
+-- Seperated all the classes into different packages.
+-- Bug fixed when doing setting again, will not apply the lastest setting.
+-- Bug fixed that ghost can go through the obstacle and get out of the maze.
+* (Done) Need to include work flow in the last commit or report.
+* (Done) Need to use 2-3 design pattern.
+-- Implemented three different maze for three levels of dificulty.
+-- Bugs fixed that if pacman died near the re-alive point, move the nearest ghost to the starting point.
+
+2019.11.27
+* (Done) consider the speed.
+-- Added different score rate for different difficulties.
+-- Design pattern
+-- -- Factory pattern
+-- -- -- Use GhostFactory() to generate different ghosts by receiving the name of the ghost.
+-- -- Singleton pattern
+-- -- -- Use Pacman() to create a new object, while this class contains only one object which can be accessed directly without need to instantiate the object of the class.
+-- -- State Pattern
+-- -- -- A State interface is created defining an action, GameManager is a class which carries a State. Use GameManager and state objects to demonstrate change in GameManager behavior based on type of state it is in.
+-- Added more information to the README.md.
+-- Applied speed change for different difficulty.
+
+2019.11.28
+-- Modified the difficulty maze.
+-- Bugs found that ghost still can go through the door.
+-- Applied the ghost AI.
+-- -- Ghost can go out from the starting box quickly.
+-- -- Ghost can go toward the pacman but will not go directly to pacman.
+-- Improve the smooth of movement of ghost.
+-- Modified README.md to catch up the process.
+
+2019.12.03
+-- Added comment to generate javadoc.
+-- Generate javadoc which locates in document folder.
+-- Added explanation for javadoc part in README.md.
+-- Written report for this coursework.
+
+2019.12.05
+-- Can do level upgrade if win this level game.
+-- Can add background music.
+-- Created class diagram.
+
+2019.12.07
+-- Recorded a video to demonstrate the software in atction and also the refactoring part.
+
+2019.12.09
+-- Reconsider the MVC pattern and implemented it to the project.
+-- Redraw the class diagram.
+-- Added MVC part in README.md.
+
+2019.12.13
+-- Added Circle, Rextangle and Runnable classes into the class diagram.
+-- Recorded the video again to controll it in the time limitation.

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" style="-fx-background-color: black;" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingController">
+   <children>
+      <FlowPane prefHeight="600.0" prefWidth="1225.0">
+         <children>
+            <Pane fx:id="Header" prefHeight="162.0" prefWidth="1225.0">
+               <children>
+                  <ImageView fx:id="HeaderImg" fitHeight="164.0" fitWidth="216.0" layoutX="299.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="Setting" fill="WHITE" layoutX="530.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Settings">
+                     <font>
+                        <Font size="90.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane prefHeight="317.0" prefWidth="550.0">
+               <children>
+                  <ImageView fx:id="MazeView" fitHeight="296.0" fitWidth="266.0" layoutX="149.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="ChoicePane" prefHeight="362.0" prefWidth="674.0">
+               <children>
+                  <ImageView fx:id="FstLeft" fitHeight="69.0" fitWidth="78.0" layoutX="145.0" layoutY="8.0" onMouseClicked="#BgminusValue" onMouseEntered="#onFstLeft" onMouseExited="#leaveFstLeft" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="SndLeft" fitHeight="69.0" fitWidth="78.0" layoutX="145.0" layoutY="98.0" onMouseClicked="#ObminusValue" onMouseEntered="#onSndLeft" onMouseExited="#leaveSndLeft" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="SndRight" fitHeight="69.0" fitWidth="78.0" layoutX="492.0" layoutY="98.0" onMouseClicked="#ObAddValue" onMouseEntered="#onSndRight" onMouseExited="#leaveSndRight" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="FstRight" fitHeight="69.0" fitWidth="78.0" layoutX="492.0" layoutY="9.0" onMouseClicked="#BgAddValue" onMouseEntered="#onFstRight" onMouseExited="#leaveFstRight" pickOnBounds="true" preserveRatio="true" />
+                  <Rectangle fx:id="BgColor" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="37.0" layoutX="262.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white;" width="192.0" />
+                  <Rectangle fx:id="BdColor" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="37.0" layoutX="262.0" layoutY="111.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: CADETBLUE;" width="192.0" />
+                  <ImageView fx:id="TrdLeft" fitHeight="69.0" fitWidth="78.0" layoutX="145.0" layoutY="191.0" onMouseClicked="#DifMinusValue" onMouseEntered="#onTrdLeft" onMouseExited="#leaveTrdLeft" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="TrdRight" fitHeight="69.0" fitWidth="78.0" layoutX="492.0" layoutY="190.0" onMouseClicked="#DifAddValue" onMouseEntered="#onTrdRight" onMouseExited="#leaveTrdRight" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="Difficulty" fill="WHITE" layoutX="241.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Easy" wrappingWidth="237.33856201171875">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="-78.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Background">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="-32.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Obstacle">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="-35.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Difficulty">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="12.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ghost">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="FthLeft" fitHeight="69.0" fitWidth="78.0" layoutX="145.0" layoutY="277.0" onMouseClicked="#GhostMinusValue" onMouseEntered="#onFthLeft" onMouseExited="#leaveFthLeft" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="FthRight" fitHeight="69.0" fitWidth="78.0" layoutX="492.0" layoutY="277.0" onMouseClicked="#GhostAddValue" onMouseEntered="#onFthRight" onMouseExited="#leaveFthRight" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="GhostNum" fill="WHITE" layoutX="241.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Three" wrappingWidth="237.33856201171875">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane prefHeight="121.0" prefWidth="1201.0">
+               <children>
+                  <Button fx:id="ConfirmBtn" layoutX="405.0" layoutY="-22.0" mnemonicParsing="false" onAction="#confirm" onMouseEntered="#OKOnEnter" onMouseExited="#OKOnExit" prefHeight="95.0" prefWidth="360.0" style="-fx-background-color: black;" text="OK" textFill="WHITE">
+                     <font>
+                        <Font size="70.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </FlowPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ScoreController">
+   <children>
+      <FlowPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Pane prefHeight="90.0" prefWidth="600.0">
+               <children>
+                  <Text layoutX="226.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scores">
+                     <font>
+                        <Font size="48.0" />
+                     </font></Text>
+               </children>
+            </Pane>
+            <Pane prefHeight="223.0" prefWidth="100.0" />
+            <ListView fx:id="ListView" prefHeight="210.0" prefWidth="400.0" />
+            <Pane prefHeight="200.0" prefWidth="100.0" />
+            <Pane prefHeight="87.0" prefWidth="600.0">
+               <children>
+                  <Text fx:id="info" layoutX="130.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your score :">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="highest" fitHeight="79.0" fitWidth="120.0" layoutX="443.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>

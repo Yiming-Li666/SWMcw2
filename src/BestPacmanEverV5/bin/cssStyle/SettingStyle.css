@@ -1,0 +1,13 @@
+.grid-pane {
+	-fx-background-color:black;
+}
+
+.text {
+	-fx-font-size:80px;
+	-fx-text-fill:white;
+	-fx-font-weight:bold;
+}
+
+.button {
+	-fx-background-color:black;
+}
